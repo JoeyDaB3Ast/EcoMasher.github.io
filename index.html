@@ -1,0 +1,116 @@
+<!--Creator: Joey Liu-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Masher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="mainSite">
+
+        <div class="backToTop" onclick="backToTop();"></div>
+
+        <section id="home">
+            <div class="container">
+                <div class="navbar">
+                    <img src="EcoMasherGood (1).jpg" class="logo">
+                    <nav>
+                        <ul id="menulist">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#hub">Hub</a></li>
+                            <li><a href="#info">Info</a></li>
+                            <li><a href="#about">About</a></li> 
+                        </ul>
+                    </nav>
+                    <img src="menu.png" class="menu" onclick="togglemenu()">
+                </div>
+
+                <div class="row">
+                    <div class="col-1">
+                        <h3>Welcome to our hackathon project</h3>
+                        <h2>Eco Masher</h2>
+                        <h3>If you want to learn about saving the environment, you've come to the right place.</h3>
+                    </div>
+                    <div class="col-2">
+                        <img src="page.png" class="page">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="hub" class="hub">
+                <div id="content-1" class="content-1">
+                <a href="https://editor.p5js.org/Baboom/full/0uTZSSfeg"><h2>Game: Eco Smasher</h2></a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="info" id='info'>
+            <section class="color1">
+                <div class="half-1">
+                    <div>
+                        <h2>"Here at Ecoheed, we believe that awareness is the first step towards global, environmental recovery"<br>
+                            -Joey Liu, Co Founder of EcoHeed</h2>
+                    </div>
+                    <div>
+                        <img src="awareness.jpg" width="800px" height="auto">
+                    </div>
+                </div>
+            </section>
+
+            <section class="color2">
+                <div class="half-2">
+                    <div>
+                        <img src="controller.jpg" width="650px" height="405px">
+                    </div>
+                    <div class="text">
+                        <h2>"Gaming, our pathway towards awareness in young adults"
+                            -Jiajun Chen, Co-Founder of EcoHeed</h2>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function(){
+            var scroll = document.querySelector('.backToTop');
+            scroll.classList.toggle("active", window.scrollY > 300)
+
+        })
+
+        function backToTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+
+        var menulist = document.getElementById("menulist")
+
+        menulist.style.maxHeight = "0px";
+
+        function togglemenu(){
+
+            if(menulist.style.maxHeight == "0px")
+            {
+                menulist.style.maxHeight = "130px"
+            }
+            else
+            {
+                menulist.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+</body>
+</html>
